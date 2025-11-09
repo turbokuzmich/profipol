@@ -312,6 +312,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Блок «Как мы работаем» */}
+      <section className="px-2 md:px-5 2xl:px-0">
+        <div className="max-w-7xl mx-auto py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Как мы работаем
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Блок «Наши работы» */}
+      <section className="px-2 md:px-5 2xl:px-0">
+        <div className="max-w-7xl mx-auto py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Наши работы
+            </h2>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
