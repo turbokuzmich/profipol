@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Внешний вид блоков хочу взять отсюда https://www.loom.com/, но покрашу все в серенький, как тут https://troyanka.ru/
 
-## Getting Started
+Состав блоков:
 
-First, run the development server:
+Верхний блок
+Стяжка пола от 100000₽ по м и мо (текст потом поправим)
+Форма заявки (имя телефон комментарий)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Блок «почему выбрать сухую стяжку»
+Четыре причины (как на https://pol.msk.ru/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Блок «как мы работаем»
+5-6 миниблоков: прием заявки, выезд замерщика и т.д.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Блок цен (думаю взять с https://troyanka.ru/ — для квартир, для других объектов)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Блок про нас
+Заголовок «Почему вам стоит выбрать нас»
+Текст какие мы крутые
 
-## Learn More
+Блок ЧАВО
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Блок контактов

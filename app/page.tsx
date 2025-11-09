@@ -76,12 +76,157 @@ export default function Home() {
           </div>
 
           {/* Форма для заявки на стяжку пола */}
-          <div></div>
+          <div className="mt-20 flex justify-center">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full mx-4">
+              <div className="flex flex-col lg:flex-row">
+                {/* Form Section - appears first on mobile */}
+                <div className="flex-1 p-8 lg:p-12 order-1 lg:order-2">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                    Оставить заявку
+                  </h3>
+                  <form className="space-y-6">
+                    {/* Size Selection */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-3">
+                        Тип объекта
+                      </label>
+                      <div className="flex flex-wrap gap-3">
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="objectType"
+                            value="apartment"
+                            className="mr-2 text-sky-600 focus:ring-sky-500"
+                          />
+                          <span className="text-sm">Квартира</span>
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="objectType"
+                            value="house"
+                            className="mr-2 text-sky-600 focus:ring-sky-500"
+                          />
+                          <span className="text-sm">Дом</span>
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="objectType"
+                            value="commercial"
+                            className="mr-2 text-sky-600 focus:ring-sky-500"
+                          />
+                          <span className="text-sm">
+                            Коммерческое помещение
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* Name Field */}
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
+                        Ваше имя *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+                        placeholder="Введите ваше имя"
+                      />
+                    </div>
+
+                    {/* Phone Field */}
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
+                        Телефон *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+                        placeholder="+7 (999) 123-45-67"
+                      />
+                    </div>
+
+                    {/* Comment Field */}
+                    <div>
+                      <label
+                        htmlFor="comment"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
+                        Комментарий
+                      </label>
+                      <textarea
+                        id="comment"
+                        name="comment"
+                        rows={4}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors resize-none"
+                        placeholder="Дополнительная информация о проекте..."
+                      />
+                    </div>
+
+                    {/* Submit Button */}
+                    <button
+                      type="submit"
+                      className="w-full bg-sky-600 hover:bg-sky-800 text-white py-4 px-6 rounded-full font-medium transition-colors"
+                    >
+                      Отправить заявку
+                    </button>
+                  </form>
+                </div>
+
+                {/* Divider */}
+                <div className="lg:w-px lg:bg-gray-200 lg:mx-0 mx-8 h-px lg:h-auto bg-gray-200 order-2 lg:order-1"></div>
+
+                {/* Description Section - appears second on mobile */}
+                <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center order-3 lg:order-1">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                    Быстрая связь
+                  </h3>
+                  <div className="space-y-4 text-gray-600">
+                    <p className="text-lg leading-relaxed">
+                      Мы свяжемся с вами в течение 15 минут и ответим на все
+                      вопросы.
+                    </p>
+                    <p className="leading-relaxed">
+                      Наши специалисты проконсультируют вас по всем вопросам
+                      стяжки пола, рассчитают стоимость работ и подберут
+                      оптимальное решение для вашего объекта.
+                    </p>
+                    <div className="pt-4">
+                      <p className="text-sm text-gray-500">
+                        Есть вопросы? Звоните прямо сейчас:
+                      </p>
+                      <a
+                        href="tel:+79991234567"
+                        className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-800 transition-colors font-medium mt-2"
+                      >
+                        <PhoneIcon className="w-5 h-5" />
+                        +7 (999) 123-45-67
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Блок «Почему стоит выбрать полусухую стяжку» */}
       <section className="px-2 md:px-5 2xl:px-0 bg-neutral-100">
-        <div className="max-w-7xl mx-auto py-40">Тут дальше идет контент</div>
+        <div className="max-w-7xl mx-auto py-40"></div>
       </section>
     </>
   );
