@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { PhoneIcon } from "@heroicons/react/24/outline";
+import {
+  PhoneIcon,
+  ChartBarSquareIcon,
+  ShieldCheckIcon,
+  BuildingOfficeIcon,
+  ClockIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
@@ -77,7 +83,7 @@ export default function Home() {
 
           {/* Форма для заявки на стяжку пола */}
           <div className="mt-20 flex justify-center">
-            <div className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full mx-4">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full">
               <div className="flex flex-col lg:flex-row">
                 {/* Form Section - appears first on mobile */}
                 <div className="flex-1 p-8 lg:p-12 order-1 lg:order-2">
@@ -226,7 +232,85 @@ export default function Home() {
 
       {/* Блок «Почему стоит выбрать полусухую стяжку» */}
       <section className="px-2 md:px-5 2xl:px-0 bg-neutral-100">
-        <div className="max-w-7xl mx-auto py-40"></div>
+        <div className="max-w-7xl mx-auto py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Почему стоит выбрать полусухую стяжку
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Современная технология, которая обеспечивает идеальный результат
+              за минимальное время
+            </p>
+          </div>
+
+          {/* Грид с преимуществами */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Блок 1: Идеально ровная поверхность */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mb-6">
+                  <ChartBarSquareIcon className="w-8 h-8 text-sky-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Идеально ровная поверхность
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Механизированная стяжка обеспечивает минимальные перепады
+                  плоскости, выполняется с учетом допустимых отклонений согласно
+                  СНиП.
+                </p>
+              </div>
+            </div>
+
+            {/* Блок 2: Пол не деформируется со временем */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                  <ShieldCheckIcon className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Пол не деформируется со временем
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Мы используем качественную смесь с добавлением фиброволокна,
+                  это обеспечивает надежность и долговечность покрытия.
+                </p>
+              </div>
+            </div>
+
+            {/* Блок 3: Отличный черновой пол */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                  <BuildingOfficeIcon className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Отличный черновой пол
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Полусухая стяжка пола служит основой для напольных покрытий:
+                  ламината, линолеума, плитки или паркета.
+                </p>
+              </div>
+            </div>
+
+            {/* Блок 4: Экономия времени */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                  <ClockIcon className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Экономия времени
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Полусухая стяжка устанавливается за один день. Быстро сохнет –
+                  по покрытию можно ходить уже через 12 часов!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
