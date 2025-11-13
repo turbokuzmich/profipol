@@ -384,12 +384,95 @@ export default function Home() {
       </section>
 
       {/* Блок «Наши цены» */}
-      <section className="px-2 md:px-5 2xl:px-0">
+      <section className="px-2 md:px-5 2xl:px-0 bg-neutral-100">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Наши работы
+              Наши цены
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Прозрачное ценообразование для всех типов объектов
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Категория: Для квартир */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                Для квартир
+              </h3>
+              <div className="space-y-6">
+                {/* Подраздел 1 */}
+                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-lg font-medium text-gray-900 mb-1">
+                        До 75 кв. м
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-3xl font-bold text-sky-600">
+                        80 000 ₽
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Подраздел 2 */}
+                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-lg font-medium text-gray-900 mb-1">
+                        75 - 100 кв. м
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-3xl font-bold text-sky-600">
+                        100 000 ₽
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Категория: Для других объектов */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                Для других объектов
+              </h3>
+              <div className="space-y-6">
+                {/* Подраздел 1 */}
+                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-lg font-medium text-gray-900 mb-1">
+                        100-200 кв. м
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-3xl font-bold text-sky-600">850 ₽</p>
+                      <p className="text-sm text-gray-500 mt-1">за м²</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Подраздел 2 */}
+                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-lg font-medium text-gray-900 mb-1">
+                        200-300 кв. м
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-3xl font-bold text-sky-600">800 ₽</p>
+                      <p className="text-sm text-gray-500 mt-1">за м²</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
