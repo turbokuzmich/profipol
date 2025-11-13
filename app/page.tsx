@@ -314,17 +314,76 @@ export default function Home() {
       </section>
 
       {/* Блок «Как мы работаем» */}
-      <section className="px-2 md:px-5 2xl:px-0">
+      <section className="px-2 md:px-5 2xl:px-0 bg-white">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Как мы работаем
             </h2>
           </div>
+
+          {/* Линейка из четырех блоков */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {/* Блок 1 */}
+            <div className="relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="relative z-10">
+                <p className="text-lg font-medium text-gray-900 leading-relaxed">
+                  Вы отправляете заявку или звоните нам
+                </p>
+              </div>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 z-0">
+                <span className="text-8xl lg:text-9xl font-bold text-sky-50 select-none">
+                  1
+                </span>
+              </div>
+            </div>
+
+            {/* Блок 2 */}
+            <div className="relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="relative z-10">
+                <p className="text-lg font-medium text-gray-900 leading-relaxed">
+                  Мы согласовываем дату замера на объекте
+                </p>
+              </div>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 z-0">
+                <span className="text-8xl lg:text-9xl font-bold text-sky-50 select-none">
+                  2
+                </span>
+              </div>
+            </div>
+
+            {/* Блок 3 */}
+            <div className="relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="relative z-10">
+                <p className="text-lg font-medium text-gray-900 leading-relaxed">
+                  Проводим замер и расчет точной стоимости
+                </p>
+              </div>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 z-0">
+                <span className="text-8xl lg:text-9xl font-bold text-sky-50 select-none">
+                  3
+                </span>
+              </div>
+            </div>
+
+            {/* Блок 4 */}
+            <div className="relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="relative z-10">
+                <p className="text-lg font-medium text-gray-900 leading-relaxed">
+                  Производим монтаж стяжки пола точно в срок
+                </p>
+              </div>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 z-0">
+                <span className="text-8xl lg:text-9xl font-bold text-sky-50 select-none">
+                  4
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Блок «Наши работы» */}
+      {/* Блок «Наши цены» */}
       <section className="px-2 md:px-5 2xl:px-0">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
