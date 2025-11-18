@@ -55,7 +55,13 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section className="px-2 md:px-5 2xl:px-0">
+      <section
+        className="px-2 md:px-5 2xl:px-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, white 0%, white 80%, #f5f5f4 80%, #f5f5f4 100%)",
+        }}
+      >
         <div className="max-w-7xl mx-auto pt-40">
           <h1 className="text-7xl font-bold tracking-tight text-center mb-5">
             Профессиональная стяжка пола
@@ -86,7 +92,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full">
               <div className="flex flex-col lg:flex-row">
                 {/* Form Section - appears first on mobile */}
-                <div className="flex-1 p-8 lg:p-12 order-1 lg:order-2">
+                <div className="flex-1 p-8 lg:p-12 order-1 lg:order-3">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900">
                     Оставить заявку
                   </h3>
@@ -193,7 +199,7 @@ export default function Home() {
                 </div>
 
                 {/* Divider */}
-                <div className="lg:w-px lg:bg-gray-200 lg:mx-0 mx-8 h-px lg:h-auto bg-gray-200 order-2 lg:order-1"></div>
+                <div className="lg:w-px lg:bg-gray-200 lg:mx-0 mx-8 h-px lg:h-auto bg-gray-200 order-2 lg:order-2"></div>
 
                 {/* Description Section - appears second on mobile */}
                 <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center order-3 lg:order-1">
@@ -401,39 +407,38 @@ export default function Home() {
               <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
                 Для квартир
               </h3>
-              <div className="space-y-6">
-                {/* Подраздел 1 */}
-                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-lg font-medium text-gray-900 mb-1">
-                        До 75 кв. м
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left py-4 px-2 text-sm font-semibold text-gray-700">
+                      площадь, м<sup>2</sup>
+                    </th>
+                    <th className="text-right py-4 px-2 text-sm font-semibold text-gray-700">
+                      стоимость, ₽ за м<sup>2</sup>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-4 px-2">
+                      <p className="text-lg font-medium text-gray-900">До 75</p>
+                    </td>
+                    <td className="py-4 px-2 text-right">
+                      <p className="text-3xl font-bold text-sky-600">80 000</p>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-4 px-2">
+                      <p className="text-lg font-medium text-gray-900">
+                        75&ndash;100
                       </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-3xl font-bold text-sky-600">
-                        80 000 ₽
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Подраздел 2 */}
-                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-lg font-medium text-gray-900 mb-1">
-                        75 - 100 кв. м
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-3xl font-bold text-sky-600">
-                        100 000 ₽
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </td>
+                    <td className="py-4 px-2 text-right">
+                      <p className="text-3xl font-bold text-sky-600">100 000</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             {/* Категория: Для других объектов */}
@@ -441,37 +446,40 @@ export default function Home() {
               <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
                 Для других объектов
               </h3>
-              <div className="space-y-6">
-                {/* Подраздел 1 */}
-                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-lg font-medium text-gray-900 mb-1">
-                        100-200 кв. м
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left py-4 px-2 text-sm font-semibold text-gray-700">
+                      площадь, м<sup>2</sup>
+                    </th>
+                    <th className="text-right py-4 px-2 text-sm font-semibold text-gray-700">
+                      стоимость, ₽ за м<sup>2</sup>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-4 px-2">
+                      <p className="text-lg font-medium text-gray-900">
+                        100&ndash;200
                       </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-3xl font-bold text-sky-600">850 ₽</p>
-                      <p className="text-sm text-gray-500 mt-1">за м²</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Подраздел 2 */}
-                <div className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-lg font-medium text-gray-900 mb-1">
-                        200-300 кв. м
+                    </td>
+                    <td className="py-4 px-2 text-right">
+                      <p className="text-3xl font-bold text-sky-600">850</p>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-4 px-2">
+                      <p className="text-lg font-medium text-gray-900">
+                        200&ndash;300
                       </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-3xl font-bold text-sky-600">800 ₽</p>
-                      <p className="text-sm text-gray-500 mt-1">за м²</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </td>
+                    <td className="py-4 px-2 text-right">
+                      <p className="text-3xl font-bold text-sky-600">800</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
