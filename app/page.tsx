@@ -484,6 +484,98 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Блок «О нас» */}
+      <section className="relative w-full bg-neutral-100 py-20 md:py-32 overflow-hidden">
+        {/* Фоновое изображение */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+          style={{
+            backgroundImage: "url('/images/about.jpg')",
+          }}
+        ></div>
+
+        {/* Контент */}
+        <div className="relative z-10 px-2 md:px-5 2xl:px-0">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Левая часть */}
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Лого
+                  </h2>
+                  <p className="text-xl leading-relaxed">
+                    Мы — команда профессионалов с многолетним опытом в области
+                    стяжки пола
+                  </p>
+                </div>
+
+                {/* Контакты */}
+                <div className="flex flex-col gap-4">
+                  <a
+                    href="tel:+79991234567"
+                    className="flex items-center gap-3 text-gray-900 hover:text-sky-600 transition-colors"
+                  >
+                    <PhoneIcon className="w-6 h-6" />
+                    <span className="text-lg font-medium">
+                      +7 (999) 123-45-67
+                    </span>
+                  </a>
+                  <a
+                    href="https://t.me/your_telegram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-900 hover:text-sky-600 transition-colors"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.174 1.584-1.11 5.433-1.567 7.21-.198.808-.587 1.078-.965.66-.299-.31-1.15-1.13-1.76-1.62-.622-.5-.217-.775.135-1.225.093-.116 1.707-1.566 1.74-1.7.008-.033.016-.155-.06-.23-.075-.075-.194-.05-.278-.03-.118.02-2.002 1.27-5.65 3.73-.535.33-1.02.49-1.455.48-.48-.01-1.404-.27-2.09-.49-.844-.27-1.515-.42-1.457-.888.023-.19.32-.385.884-.585 3.47-1.52 5.79-2.52 6.97-3.01 3.33-1.38 4.02-1.62 4.47-1.63.1 0 .32.024.465.14.118.1.15.234.165.33.014.095.033.31.02.48z" />
+                    </svg>
+                    <span className="text-lg font-medium">Telegram</span>
+                  </a>
+                </div>
+
+                {/* Юридическая информация */}
+                <div className="pt-4 border-t border-gray-300">
+                  <p className="text-xs text-gray-800 space-y-1">
+                    <span className="block">ИНН: 123456789012</span>
+                    <span className="block">ОГРН: 1234567890123</span>
+                    <span className="block mt-2">
+                      © 2025. Все права защищены.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Правая часть */}
+              <div className="text-base md:text-lg leading-relaxed space-y-4">
+                <p>
+                  Наша компания специализируется на выполнении полусухой стяжки
+                  пола с использованием современного оборудования и качественных
+                  материалов. Мы работаем как с частными клиентами, так и с
+                  коммерческими объектами.
+                </p>
+                <p>
+                  За годы работы мы выполнили сотни успешных проектов в Москве и
+                  Московской области. Наш опыт позволяет нам гарантировать
+                  высокое качество работ и соблюдение всех сроков.
+                </p>
+                <p>
+                  Мы используем только проверенные технологии и материалы,
+                  которые соответствуют всем строительным нормам и стандартам.
+                  Каждый наш проект — это результат тщательной подготовки и
+                  профессионального подхода.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
