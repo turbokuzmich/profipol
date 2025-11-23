@@ -1,101 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import {
   PhoneIcon,
   ChartBarSquareIcon,
   ShieldCheckIcon,
   BuildingOfficeIcon,
   ClockIcon,
-  ChevronDownIcon,
 } from "@heroicons/react/24/outline";
-
-function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const faqItems = [
-    {
-      question: "Сколько времени занимает выполнение стяжки пола?",
-      answer:
-        "Время выполнения работ зависит от площади помещения. В среднем, для квартиры площадью 50-100 м² стяжка выполняется за один рабочий день. После завершения работ по покрытию можно ходить уже через 12 часов, а полное высыхание происходит в течение 3-5 дней в зависимости от толщины слоя и условий в помещении.",
-    },
-    {
-      question: "Какая гарантия на выполненные работы?",
-      answer:
-        "Мы предоставляем пожизненную гарантию на все выполненные работы. Это означает, что мы несем ответственность за качество стяжки на протяжении всего срока эксплуатации. В случае возникновения проблем, связанных с качеством выполненных работ, мы устраним их бесплатно.",
-    },
-    {
-      question: "Можно ли делать стяжку в зимнее время?",
-      answer:
-        "Да, стяжку можно выполнять в любое время года, включая зимний период. Мы используем специальные добавки, которые позволяют работать при низких температурах. Важно обеспечить нормальные условия в помещении (температура не ниже +5°C) и защитить объект от сквозняков во время выполнения работ.",
-    },
-    {
-      question: "Какая минимальная толщина стяжки?",
-      answer:
-        "Минимальная толщина полусухой стяжки составляет 30 мм. Однако оптимальная толщина зависит от состояния основания и требований к уровню пола. При необходимости выравнивания больших перепадов толщина может достигать 100 мм и более. Наш специалист определит необходимую толщину во время замера.",
-    },
-    {
-      question: "Нужна ли дополнительная подготовка основания?",
-      answer:
-        "Перед выполнением стяжки мы проводим подготовку основания: удаляем мусор, пыль и отслоившиеся части старого покрытия. При необходимости выполняем грунтовку для улучшения сцепления. Если на основании есть значительные неровности или повреждения, мы устраняем их перед укладкой стяжки. Все подготовительные работы входят в стоимость услуги.",
-    },
-  ];
-
-  const toggleItem = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  return (
-    <section className="px-2 md:px-5 2xl:px-0 bg-white">
-      <div className="max-w-7xl mx-auto py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Часто задаваемые вопросы
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ответы на самые популярные вопросы о стяжке пола
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto space-y-4">
-          {faqItems.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md"
-            >
-              <button
-                onClick={() => toggleItem(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
-                aria-expanded={openIndex === index}
-              >
-                <span className="text-lg md:text-xl font-semibold text-gray-900 pr-4">
-                  {item.question}
-                </span>
-                <ChevronDownIcon
-                  className={`w-6 h-6 text-sky-600 shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? "transform rotate-180" : ""
-                  }`}
-                />
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="px-6 pb-5 pt-0">
-                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+import FAQSection from "./faq";
+import Logo from "./components/logo";
 
 export default function Home() {
   return (
@@ -105,10 +19,10 @@ export default function Home() {
         <nav className="px-2 md:px-5 2xl:px-0">
           <div className="flex items-center justify-between gap-20 max-w-7xl mx-auto py-5">
             <div className="flex items-center gap-4">
-              <Link href="/">
-                <img src="/vercel.svg" alt="Профипол" className="w-16" />
+              <Link className="block w-24 md:w-33 cursor-pointer" href="/">
+                <Logo />
               </Link>
-              <span className="text-xs font-normal">
+              <span className="text-s font-normal">
                 Профессиональная
                 <br />
                 стяжка пола
@@ -127,15 +41,22 @@ export default function Home() {
                 </a>
               </div>
               <a
-                href="tel:+79991234567"
+                href="tel:+79162499167"
                 className="flex items-center gap-2 text-sky-600 hover:text-sky-800 transition-colors"
               >
                 <PhoneIcon className="w-5 h-5" />
-                <span className="font-medium">+7 (999) 123-45-67</span>
+                <span className="font-medium">+7 916 249-91-67</span>
+              </a>
+              <a
+                href="tel:+79265606349"
+                className="flex items-center gap-2 text-sky-600 hover:text-sky-800 transition-colors"
+              >
+                <PhoneIcon className="w-5 h-5" />
+                <span className="font-medium">+7 926 560-63-49</span>
               </a>
               <button
                 type="button"
-                className="bg-sky-600 hover:bg-sky-800 text-white px-6 py-4 rounded-full cursor-pointer"
+                className="bg-sky-900 hover:bg-sky-800 text-white px-6 py-4 rounded-full cursor-pointer"
               >
                 Оставить заявку
               </button>
@@ -165,13 +86,13 @@ export default function Home() {
           <div className="flex justify-center gap-4">
             <button
               type="button"
-              className="bg-sky-600 hover:bg-sky-800 text-white px-6 py-4 rounded-full cursor-pointer"
+              className="bg-sky-900 hover:bg-sky-800 text-white px-6 py-4 rounded-full cursor-pointer"
             >
               Оставить заявку
             </button>
             <button
               type="button"
-              className="bg-white text-sky-600 hover:text-sky-800 border border-sky-600 px-6 py-4 rounded-full cursor-pointer"
+              className="bg-white text-sky-900 hover:text-sky-800 border border-sky-900 px-6 py-4 rounded-full cursor-pointer"
             >
               Узнать цены
             </button>
@@ -595,8 +516,8 @@ export default function Home() {
               {/* Левая часть */}
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                    Лого
+                  <h2 className="block w-24 md:w-33">
+                    <Logo />
                   </h2>
                   <p className="text-xl leading-relaxed">
                     Мы — команда профессионалов с многолетним опытом в области
@@ -607,12 +528,21 @@ export default function Home() {
                 {/* Контакты */}
                 <div className="flex flex-col gap-4">
                   <a
-                    href="tel:+79991234567"
+                    href="tel:+79162499167"
                     className="flex items-center gap-3 text-gray-900 hover:text-sky-600 transition-colors"
                   >
                     <PhoneIcon className="w-6 h-6" />
                     <span className="text-lg font-medium">
-                      +7 (999) 123-45-67
+                      +7 916 249-91-67
+                    </span>
+                  </a>
+                  <a
+                    href="tel:+79265606349"
+                    className="flex items-center gap-3 text-gray-900 hover:text-sky-600 transition-colors"
+                  >
+                    <PhoneIcon className="w-6 h-6" />
+                    <span className="text-lg font-medium">
+                      +7 926 560-63-49
                     </span>
                   </a>
                   <a
@@ -648,21 +578,24 @@ export default function Home() {
               {/* Правая часть */}
               <div className="text-base md:text-lg leading-relaxed space-y-4">
                 <p>
-                  Наша компания специализируется на выполнении полусухой стяжки
-                  пола с использованием современного оборудования и качественных
-                  материалов. Мы работаем как с частными клиентами, так и с
-                  коммерческими объектами.
+                  Наша компания предлагает услуги по&nbsp;устройству полусухой
+                  стяжки в&nbsp;Москве и&nbsp;регионе под ключ.
                 </p>
                 <p>
-                  За годы работы мы выполнили сотни успешных проектов в Москве и
-                  Московской области. Наш опыт позволяет нам гарантировать
-                  высокое качество работ и соблюдение всех сроков.
+                  Мы&nbsp;берёмся за&nbsp;задачи любой сложности и&nbsp;объёма,
+                  обеспечивая высокую скорость работы&nbsp;&mdash; до&nbsp;300 м
+                  <sup>2</sup>&nbsp;за&nbsp;один рабочий день.
                 </p>
                 <p>
-                  Мы используем только проверенные технологии и материалы,
-                  которые соответствуют всем строительным нормам и стандартам.
-                  Каждый наш проект — это результат тщательной подготовки и
-                  профессионального подхода.
+                  Даём твёрдые гарантии на&nbsp;качество, соответствие
+                  заявленным параметрам прочности и&nbsp;создание надёжного,
+                  долговечного основания.
+                </p>
+                <p>
+                  Этот результат достигается благодаря использованию
+                  качественных материалов, современной техники для стяжки
+                  и&nbsp;высококвалифицированных исполнителей с&nbsp;более чем
+                  восьмилетним стажем работы в&nbsp;данной области.
                 </p>
               </div>
             </div>
