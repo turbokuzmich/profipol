@@ -53,10 +53,10 @@ export default function Home() {
           {/* Форма для заявки на стяжку пола */}
           <div className="mt-20 flex justify-center">
             <div className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full">
-              <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col lg:flex-row items-stretch">
                 {/* Form Section - appears first on mobile */}
                 <div className="flex-1 p-8 lg:p-12 order-1 lg:order-3">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                  <h3 className="text-3xl font-semibold mb-6 text-gray-900">
                     Оставить заявку
                   </h3>
                   <form className="space-y-6">
@@ -71,7 +71,7 @@ export default function Home() {
                             type="radio"
                             name="objectType"
                             value="apartment"
-                            className="mr-2 text-sky-600 focus:ring-sky-500"
+                            className="mr-2 text-sky-900 focus:ring-sky-600"
                           />
                           <span className="text-sm">Квартира</span>
                         </label>
@@ -80,7 +80,7 @@ export default function Home() {
                             type="radio"
                             name="objectType"
                             value="house"
-                            className="mr-2 text-sky-600 focus:ring-sky-500"
+                            className="mr-2 text-sky-900 focus:ring-sky-600"
                           />
                           <span className="text-sm">Дом</span>
                         </label>
@@ -89,7 +89,7 @@ export default function Home() {
                             type="radio"
                             name="objectType"
                             value="commercial"
-                            className="mr-2 text-sky-600 focus:ring-sky-500"
+                            className="mr-2 text-sky-900 focus:ring-sky-600"
                           />
                           <span className="text-sm">
                             Коммерческое помещение
@@ -111,7 +111,7 @@ export default function Home() {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg  transition-colors"
                         placeholder="Введите ваше имя"
                       />
                     </div>
@@ -129,7 +129,7 @@ export default function Home() {
                         id="phone"
                         name="phone"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg  transition-colors"
                         placeholder="+7 (999) 123-45-67"
                       />
                     </div>
@@ -146,7 +146,7 @@ export default function Home() {
                         id="comment"
                         name="comment"
                         rows={4}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg  transition-colors resize-none"
                         placeholder="Дополнительная информация о проекте..."
                       />
                     </div>
@@ -154,7 +154,7 @@ export default function Home() {
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      className="w-full bg-sky-600 hover:bg-sky-800 text-white py-4 px-6 rounded-full font-medium transition-colors"
+                      className="w-full bg-sky-900 hover:bg-sky-800 text-white py-4 px-6 rounded-full font-medium transition-colors"
                     >
                       Отправить заявку
                     </button>
@@ -165,12 +165,12 @@ export default function Home() {
                 <div className="lg:w-px lg:bg-gray-200 lg:mx-0 mx-8 h-px lg:h-auto bg-gray-200 order-2 lg:order-2"></div>
 
                 {/* Description Section - appears second on mobile */}
-                <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center order-3 lg:order-1">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                <div className="flex-1 p-8 lg:p-12 flex flex-col order-3 lg:order-1">
+                  <h3 className="text-3xl font-semibold mb-6 text-gray-900">
                     Быстрая связь
                   </h3>
                   <div className="space-y-4 text-gray-600">
-                    <p className="text-lg leading-relaxed">
+                    <p className="text-xl leading-relaxed">
                       Мы свяжемся с вами в течение 15 минут и ответим на все
                       вопросы.
                     </p>
@@ -179,17 +179,27 @@ export default function Home() {
                       стяжки пола, рассчитают стоимость работ и подберут
                       оптимальное решение для вашего объекта.
                     </p>
-                    <div className="pt-4">
-                      <p className="text-sm text-gray-500">
+                    <div className="pt-4 space-y-4">
+                      <p className="text-sm text-gray-800">
                         Есть вопросы? Звоните прямо сейчас:
                       </p>
-                      <a
-                        href="tel:+79991234567"
-                        className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-800 transition-colors font-medium mt-2"
-                      >
-                        <PhoneIcon className="w-5 h-5" />
-                        +7 (999) 123-45-67
-                      </a>
+                      <div className="flex items-start gap-3 text-sky-900 text-lg">
+                        <PhoneIcon className="w-6 h-6 mt-1" />
+                        <div className="flex flex-col">
+                          <a
+                            href="tel:+79162499167"
+                            className="font-medium hover:text-sky-800 transition-colors"
+                          >
+                            +7 916 249-91-67
+                          </a>
+                          <a
+                            href="tel:+79265606349"
+                            className="font-medium hover:text-sky-800 transition-colors"
+                          >
+                            +7 926 560-63-49
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -218,7 +228,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mb-6">
-                  <ChartBarSquareIcon className="w-8 h-8 text-sky-600" />
+                  <ChartBarSquareIcon className="w-8 h-8 text-sky-900" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Идеально ровная поверхность
@@ -235,7 +245,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                  <ShieldCheckIcon className="w-8 h-8 text-green-600" />
+                  <ShieldCheckIcon className="w-8 h-8 text-green-900" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Пол не деформируется со временем
@@ -251,7 +261,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                  <BuildingOfficeIcon className="w-8 h-8 text-purple-600" />
+                  <BuildingOfficeIcon className="w-8 h-8 text-purple-900" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Отличный черновой пол
@@ -387,7 +397,7 @@ export default function Home() {
                       <p className="text-lg font-medium text-gray-900">До 75</p>
                     </td>
                     <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-600">80 000</p>
+                      <p className="text-3xl font-bold text-sky-900">80 000</p>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-200">
@@ -397,7 +407,7 @@ export default function Home() {
                       </p>
                     </td>
                     <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-600">100 000</p>
+                      <p className="text-3xl font-bold text-sky-900">100 000</p>
                     </td>
                   </tr>
                 </tbody>
@@ -428,7 +438,7 @@ export default function Home() {
                       </p>
                     </td>
                     <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-600">850</p>
+                      <p className="text-3xl font-bold text-sky-900">850</p>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-200">
@@ -438,7 +448,7 @@ export default function Home() {
                       </p>
                     </td>
                     <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-600">800</p>
+                      <p className="text-3xl font-bold text-sky-900">800</p>
                     </td>
                   </tr>
                 </tbody>
@@ -455,7 +465,7 @@ export default function Home() {
       <section className="relative w-full bg-neutral-100 py-20 md:py-32 overflow-hidden">
         {/* Фоновое изображение */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: "url('/images/about.jpg')",
           }}
@@ -479,29 +489,28 @@ export default function Home() {
 
                 {/* Контакты */}
                 <div className="flex flex-col gap-4">
-                  <a
-                    href="tel:+79162499167"
-                    className="flex items-center gap-3 text-gray-900 hover:text-sky-600 transition-colors"
-                  >
-                    <PhoneIcon className="w-6 h-6" />
-                    <span className="text-lg font-medium">
-                      +7 916 249-91-67
-                    </span>
-                  </a>
-                  <a
-                    href="tel:+79265606349"
-                    className="flex items-center gap-3 text-gray-900 hover:text-sky-600 transition-colors"
-                  >
-                    <PhoneIcon className="w-6 h-6" />
-                    <span className="text-lg font-medium">
-                      +7 926 560-63-49
-                    </span>
-                  </a>
+                  <div className="flex items-start gap-3 text-gray-900 text-lg">
+                    <PhoneIcon className="w-6 h-6 mt-1" />
+                    <div className="flex flex-col">
+                      <a
+                        href="tel:+79162499167"
+                        className="font-medium hover:text-sky-800 transition-colors"
+                      >
+                        +7 916 249-91-67
+                      </a>
+                      <a
+                        href="tel:+79265606349"
+                        className="font-medium hover:text-sky-800 transition-colors"
+                      >
+                        +7 926 560-63-49
+                      </a>
+                    </div>
+                  </div>
                   <a
                     href="https://t.me/your_telegram"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-gray-900 hover:text-sky-600 transition-colors"
+                    className="flex items-center gap-3 text-gray-900 hover:text-sky-900 transition-colors"
                   >
                     <svg
                       className="w-6 h-6"

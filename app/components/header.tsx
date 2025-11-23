@@ -26,9 +26,13 @@ export default function Header() {
       <nav className="px-2 md:px-5 2xl:px-0">
         <div className="flex items-center justify-between gap-20 max-w-7xl mx-auto py-5">
           <div className="flex items-center gap-4">
-            <Link className="block w-24 md:w-33 cursor-pointer" href="/">
+            <button
+              className="block w-24 md:w-33 cursor-pointer"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              title="наверх"
+            >
               <Logo />
-            </Link>
+            </button>
             <span className="text-xs font-normal">
               Профессиональная
               <br />
@@ -47,7 +51,7 @@ export default function Header() {
                 Контакты
               </a>
             </div>
-            <div className="flex items-center gap-2 text-sky-900 text-lg">
+            <div className="flex items-start gap-3 text-sky-900 text-lg">
               <PhoneIcon className="w-6 h-6 mt-1" />
               <div className="flex flex-col">
                 <a

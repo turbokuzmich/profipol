@@ -58,14 +58,14 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
-                aria-expanded={openIndex === index}
+                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer"
+                aria-expanded={openIndex === index ? "true" : "false"}
               >
                 <span className="text-lg md:text-xl font-semibold text-gray-900 pr-4">
                   {item.question}
                 </span>
                 <ChevronDownIcon
-                  className={`w-6 h-6 text-sky-600 shrink-0 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-sky-900 shrink-0 transition-transform duration-300 ${
                     openIndex === index ? "transform rotate-180" : ""
                   }`}
                 />
