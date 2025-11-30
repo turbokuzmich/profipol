@@ -39,12 +39,40 @@ export default function Home() {
           <div className="flex justify-center gap-4">
             <button
               type="button"
+              onClick={() => {
+                const targetElement = document.getElementById("form");
+                if (targetElement) {
+                  const headerOffset = 100; // Offset for sticky header
+                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const offsetPosition =
+                    elementPosition + window.pageYOffset - headerOffset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
               className="bg-sky-900 hover:bg-sky-800 text-white px-6 py-4 rounded-full cursor-pointer"
             >
               Оставить заявку
             </button>
             <button
               type="button"
+              onClick={() => {
+                const targetElement = document.getElementById("prices");
+                if (targetElement) {
+                  const headerOffset = 100; // Offset for sticky header
+                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const offsetPosition =
+                    elementPosition + window.pageYOffset - headerOffset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
               className="bg-white text-sky-900 hover:text-sky-800 border border-sky-900 px-6 py-4 rounded-full cursor-pointer"
             >
               Узнать цены

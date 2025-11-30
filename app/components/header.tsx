@@ -101,6 +101,7 @@ export default function Header() {
             </div>
             <button
               type="button"
+              onClick={(e) => handleSmoothScroll(e, "#form")}
               className="bg-sky-900 hover:bg-sky-800 text-white px-6 py-4 rounded-full cursor-pointer"
             >
               Оставить заявку

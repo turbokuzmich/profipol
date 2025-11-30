@@ -83,7 +83,7 @@ export default function Form() {
         </div>
       )}
 
-      <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+      <form id="form" className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
         {/* Size Selection */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-3">
