@@ -19,20 +19,20 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="px-2 md:px-5 2xl:px-0"
+        className="px-4 md:px-5 2xl:px-0"
         style={{
           background:
             "linear-gradient(to bottom, white 0%, white 80%, #f5f5f4 80%, #f5f5f4 100%)",
         }}
       >
-        <div className="max-w-7xl mx-auto pt-40">
-          <h1 className="text-7xl font-bold tracking-tight text-center mb-5">
+        <div className="max-w-7xl mx-auto pt-20 md:pt-40">
+          <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-center mb-5">
             Профессиональная стяжка пола
           </h1>
           <div className="flex justify-center mb-10">
-            <p className="text-2xl font-normal text-center max-w-2xl leading-10">
-              С пожизненной гарантией в Москве и Московской области от 280 ₽ за
-              м²
+            <p className="text-xl md:text-2xl font-normal text-center max-w-2xl leading-8 md:leading-10">
+              С&nbsp;пожизненной гарантией в&nbsp;Москве и&nbsp;Московской
+              области от&nbsp;280&nbsp;₽ за&nbsp;м&sup2;
             </p>
           </div>
           <div className="flex justify-center gap-4">
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
 
           {/* Форма для заявки на стяжку пола */}
-          <div className="mt-20 flex justify-center">
+          <div id="form" className="mt-20 flex justify-center">
             <div className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full">
               <div className="flex flex-col lg:flex-row items-stretch">
                 {/* Form Section - appears first on mobile */}
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Блок «Почему стоит выбрать полусухую стяжку» */}
-      <section className="px-2 md:px-5 2xl:px-0 bg-neutral-100">
+      <section className="px-4 md:px-5 2xl:px-0 bg-neutral-100">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -293,7 +293,7 @@ export default function Home() {
       </section>
 
       {/* Блок «Как мы работаем» */}
-      <section className="px-2 md:px-5 2xl:px-0 bg-white">
+      <section className="px-4 md:px-5 2xl:px-0 bg-white">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -363,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* Блок «Наши цены» */}
-      <section id="prices" className="px-2 md:px-5 2xl:px-0 bg-neutral-100">
+      <section id="prices" className="px-4 md:px-5 2xl:px-0 bg-neutral-100">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -462,21 +462,24 @@ export default function Home() {
       <FAQSection />
 
       {/* Блок «О нас» */}
-      <section id="about" className="relative w-full bg-neutral-100 py-20 md:py-32 overflow-hidden">
+      <section
+        id="about"
+        className="relative w-full bg-neutral-100 py-20 md:py-32 overflow-hidden"
+      >
         {/* Фоновое изображение */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: "url('/images/about.jpg')",
           }}
-        ></div>
+        />
 
         {/* Контент */}
-        <div className="relative z-10 px-2 md:px-5 2xl:px-0">
+        <div className="relative z-10 px-4 md:px-5 2xl:px-0">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Левая часть */}
-              <div className="space-y-6">
+              <div id="contacts" className="space-y-6 order-2 lg:order-1">
                 <div className="space-y-4">
                   <h2 className="block w-24 md:w-33">
                     <Logo />
@@ -537,7 +540,7 @@ export default function Home() {
               </div>
 
               {/* Правая часть */}
-              <div className="text-base md:text-lg leading-relaxed space-y-4">
+              <div className="text-base md:text-lg leading-relaxed space-y-4 order-1 lg:order-2">
                 <p>
                   Наша компания предлагает услуги по&nbsp;устройству полусухой
                   стяжки в&nbsp;Москве и&nbsp;регионе под ключ.

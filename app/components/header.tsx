@@ -1,7 +1,8 @@
 "use client";
 
 import Logo from "./logo";
-import { PhoneIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
+import { PhoneIcon } from "@heroicons/react/24/solid";
 import { useState, useEffect } from "react";
 
 export const menuItems = [
@@ -22,7 +23,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+    href: string
+  ) => {
     if (href.startsWith("#")) {
       e.preventDefault();
       const targetId = href.substring(1);
@@ -30,7 +34,8 @@ export default function Header() {
       if (targetElement) {
         const headerOffset = 100; // Offset for sticky header
         const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
@@ -48,7 +53,8 @@ export default function Header() {
     >
       <nav className="px-2 md:px-5 2xl:px-0">
         <div className="flex items-center justify-between gap-20 max-w-7xl mx-auto py-5">
-          <div className="flex items-center gap-4">
+          {/* Desktop logo and text - hidden on mobile */}
+          <div className="hidden md:flex items-center gap-4">
             <button
               className="block w-24 md:w-33 cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -62,7 +68,8 @@ export default function Header() {
               стяжка пола
             </span>
           </div>
-          <div className="flex items-center gap-10">
+          {/* Desktop menu and buttons - hidden on mobile */}
+          <div className="hidden md:flex items-center gap-10">
             <div className="flex items-center gap-8 text-base">
               {menuItems.map((item) => (
                 <a
@@ -98,6 +105,57 @@ export default function Header() {
             >
               Оставить заявку
             </button>
+          </div>
+          {/* Mobile version - visible only on mobile */}
+          <div className="flex md:hidden items-center justify-between w-full gap-4">
+            {/* Mobile logo */}
+            <button
+              className="block w-24 cursor-pointer"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              title="наверх"
+            >
+              <Logo />
+            </button>
+            {/* Mobile buttons */}
+            <div className="flex items-center gap-3">
+              {/* Contacts button - scrolls to about section */}
+              <button
+                type="button"
+                onClick={(e) => handleSmoothScroll(e, "#contacts")}
+                className="p-3 text-sky-900 hover:bg-sky-50 rounded-full transition-colors"
+                title="Контакты"
+              >
+                <PhoneIcon className="w-6 h-6" />
+              </button>
+              {/* Menu dropdown button */}
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="p-3 text-sky-900 hover:bg-sky-50 rounded-full transition-colors"
+                  aria-label="Меню"
+                  title="Меню"
+                >
+                  <Bars3Icon className="w-8 h-8" />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu bg-white shadow-lg rounded-box w-52 mt-2 z-10 border border-gray-200"
+                >
+                  {menuItems.map((item) => (
+                    <li key={item.label}>
+                      <a
+                        href={item.href}
+                        onClick={(e) => handleSmoothScroll(e, item.href)}
+                        className="text-gray-700 hover:bg-sky-50 hover:text-sky-900"
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
