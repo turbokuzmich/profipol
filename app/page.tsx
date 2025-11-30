@@ -7,7 +7,7 @@ import {
   BuildingOfficeIcon,
   ClockIcon,
 } from "@heroicons/react/24/outline";
-import FAQSection from "./faq";
+import FAQSection from "./components/faq";
 import Logo from "./components/logo";
 import Header from "./components/header";
 
@@ -363,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* Блок «Наши цены» */}
-      <section className="px-2 md:px-5 2xl:px-0 bg-neutral-100">
+      <section id="prices" className="px-2 md:px-5 2xl:px-0 bg-neutral-100">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -462,7 +462,7 @@ export default function Home() {
       <FAQSection />
 
       {/* Блок «О нас» */}
-      <section className="relative w-full bg-neutral-100 py-20 md:py-32 overflow-hidden">
+      <section id="about" className="relative w-full bg-neutral-100 py-20 md:py-32 overflow-hidden">
         {/* Фоновое изображение */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"

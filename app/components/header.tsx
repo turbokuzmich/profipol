@@ -1,9 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import Logo from "./logo";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
+
+export const menuItems = [
+  { label: "О нас", href: "#about" },
+  { label: "Цены", href: "#prices" },
+  { label: "FAQ", href: "#faq" },
+];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +21,24 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const headerOffset = 100; // Offset for sticky header
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
 
   return (
     <header
@@ -41,15 +64,16 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-10">
             <div className="flex items-center gap-8 text-base">
-              <a href="/" className="hover:underline">
-                Цены
-              </a>
-              <a href="/" className="hover:underline">
-                Работы
-              </a>
-              <a href="/" className="hover:underline">
-                Контакты
-              </a>
+              {menuItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
+                  className="hover:underline"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
             <div className="flex items-start gap-3 text-sky-900 text-lg">
               <PhoneIcon className="w-6 h-6 mt-1" />

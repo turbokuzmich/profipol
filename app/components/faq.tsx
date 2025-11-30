@@ -39,7 +39,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="px-2 md:px-5 2xl:px-0 bg-white">
+    <section id="faq" className="px-2 md:px-5 2xl:px-0 bg-white">
       <div className="max-w-7xl mx-auto py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -59,7 +59,6 @@ export default function FAQSection() {
               <button
                 onClick={() => toggleItem(index)}
                 className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer"
-                aria-expanded={openIndex === index ? "true" : "false"}
               >
                 <span className="text-lg md:text-xl font-semibold text-gray-900 pr-4">
                   {item.question}
