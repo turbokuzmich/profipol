@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 interface FormData {
   objectType: string;
@@ -10,15 +11,57 @@ interface FormData {
 }
 
 export default function Form() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    // Handle form submission here
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message: result.message || "Заявка успешно отправлена!",
+        });
+        reset(); // Reset form after successful submission
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message:
+            result.error ||
+            result.errors?.join(", ") ||
+            "Произошла ошибка при отправке заявки",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Произошла ошибка при отправке заявки. Попробуйте позже.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -26,6 +69,20 @@ export default function Form() {
       <h3 className="text-3xl font-semibold mb-6 text-gray-900">
         Оставить заявку
       </h3>
+
+      {/* Success/Error Messages */}
+      {submitStatus.type && (
+        <div
+          className={`mb-6 p-4 rounded-lg ${
+            submitStatus.type === "success"
+              ? "bg-green-50 text-green-800 border border-green-200"
+              : "bg-red-50 text-red-800 border border-red-200"
+          }`}
+        >
+          <p className="text-sm font-medium">{submitStatus.message}</p>
+        </div>
+      )}
+
       <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
         {/* Size Selection */}
         <div>
@@ -173,9 +230,12 @@ export default function Form() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-sky-900 hover:bg-sky-800 text-white py-4 px-6 rounded-full font-medium transition-colors"
+          disabled={isSubmitting}
+          className={`w-full bg-sky-900 text-white py-4 px-6 rounded-full font-medium transition-colors ${
+            isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-sky-800"
+          }`}
         >
-          Отправить заявку
+          {isSubmitting ? "Отправка..." : "Отправить заявку"}
         </button>
       </form>
     </>
