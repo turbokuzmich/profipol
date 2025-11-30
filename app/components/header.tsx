@@ -51,7 +51,7 @@ export default function Header() {
         isScrolled ? "shadow-md" : ""
       }`}
     >
-      <nav className="px-2 md:px-5 2xl:px-0">
+      <nav className="px-4 md:px-5 2xl:px-0">
         <div className="flex items-center justify-between gap-20 max-w-7xl mx-auto py-5">
           {/* Desktop logo and text - hidden on mobile */}
           <div className="hidden md:flex items-center gap-4">
