@@ -30,10 +30,12 @@ export default function Home() {
           <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-center mb-5">
             Профессиональная стяжка пола
           </h1>
-          <div className="flex justify-center mb-10">
+          <div className="flex flex-col items-center gap-1 mb-10">
             <p className="text-xl md:text-2xl font-normal text-center max-w-2xl leading-8 md:leading-10">
-              С&nbsp;пожизненной гарантией в&nbsp;Москве и&nbsp;Московской
-              области от&nbsp;280&nbsp;₽ за&nbsp;м&sup2;
+              В Москве и Московской области за 1 день
+            </p>
+            <p className="text-xl md:text-2xl font-normal text-center max-w-2xl leading-8 md:leading-10">
+              Гарантия — 3 года
             </p>
           </div>
           <div className="flex justify-center gap-4">
@@ -43,7 +45,8 @@ export default function Home() {
                 const targetElement = document.getElementById("form");
                 if (targetElement) {
                   const headerOffset = 100; // Offset for sticky header
-                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const elementPosition =
+                    targetElement.getBoundingClientRect().top;
                   const offsetPosition =
                     elementPosition + window.pageYOffset - headerOffset;
 
@@ -63,7 +66,8 @@ export default function Home() {
                 const targetElement = document.getElementById("prices");
                 if (targetElement) {
                   const headerOffset = 100; // Offset for sticky header
-                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const elementPosition =
+                    targetElement.getBoundingClientRect().top;
                   const offsetPosition =
                     elementPosition + window.pageYOffset - headerOffset;
 
@@ -301,89 +305,78 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Категория: Для квартир */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                Для квартир
-              </h3>
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-4 px-2 text-sm font-semibold text-gray-700">
-                      площадь, м<sup>2</sup>
-                    </th>
-                    <th className="text-right py-4 px-2 text-sm font-semibold text-gray-700">
-                      стоимость, ₽ за м<sup>2</sup>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-2">
-                      <p className="text-lg font-medium text-gray-900">До 75</p>
-                    </td>
-                    <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-900">80 000</p>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-2">
-                      <p className="text-lg font-medium text-gray-900">
-                        75&ndash;100
-                      </p>
-                    </td>
-                    <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-900">100 000</p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            {/* Категория: Для других объектов */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                Для других объектов
-              </h3>
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-4 px-2 text-sm font-semibold text-gray-700">
-                      площадь, м<sup>2</sup>
-                    </th>
-                    <th className="text-right py-4 px-2 text-sm font-semibold text-gray-700">
-                      стоимость, ₽ за м<sup>2</sup>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-2">
-                      <p className="text-lg font-medium text-gray-900">
-                        100&ndash;200
-                      </p>
-                    </td>
-                    <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-900">850</p>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-2">
-                      <p className="text-lg font-medium text-gray-900">
-                        200&ndash;300
-                      </p>
-                    </td>
-                    <td className="py-4 px-2 text-right">
-                      <p className="text-3xl font-bold text-sky-900">800</p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div className="bg-white max-w-2xl mx-auto rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-gray-200">
+                  <th className="text-left py-4 px-2 text-sm font-semibold text-gray-700">
+                    площадь, м<sup>2</sup>
+                  </th>
+                  <th className="text-right py-4 px-2 text-sm font-semibold text-gray-700">
+                    стоимость, ₽ за м<sup>2</sup>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-2">
+                    <p className="text-lg font-medium text-gray-900">До 40</p>
+                  </td>
+                  <td className="py-4 px-2 text-right">
+                    <p className="text-3xl font-bold text-sky-900">
+                      договорная
+                    </p>
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-2">
+                    <p className="text-lg font-medium text-gray-900">
+                      40&ndash;75
+                    </p>
+                  </td>
+                  <td className="py-4 px-2 text-right">
+                    <p className="text-3xl font-bold text-sky-900">от 1 650</p>
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-2">
+                    <p className="text-lg font-medium text-gray-900">
+                      75&ndash;100
+                    </p>
+                  </td>
+                  <td className="py-4 px-2 text-right">
+                    <p className="text-3xl font-bold text-sky-900">от 1 550</p>
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-2">
+                    <p className="text-lg font-medium text-gray-900">
+                      100&ndash;200
+                    </p>
+                  </td>
+                  <td className="py-4 px-2 text-right">
+                    <p className="text-3xl font-bold text-sky-900">от 1 450</p>
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-2">
+                    <p className="text-lg font-medium text-gray-900">
+                      Более 200
+                    </p>
+                  </td>
+                  <td className="py-4 px-2 text-right">
+                    <p className="text-3xl font-bold text-sky-900">
+                      договорная
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
+
+      {/* Блок «Все включено» */}
 
       {/* Блок FAQ */}
       <FAQSection />
