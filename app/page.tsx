@@ -33,7 +33,7 @@ export default function Home() {
           </h1>
           <div className="flex flex-col items-center gap-1 mb-10">
             <p className="text-xl md:text-2xl font-normal text-center max-w-2xl leading-8 md:leading-10">
-              В Москве и Московской области за 1 день
+              В&nbsp;Москве и&nbsp;Московской области за&nbsp;1&nbsp;день
             </p>
             <p className="text-xl md:text-2xl font-normal text-center max-w-2xl leading-8 md:leading-10">
               Гарантия — 3 года
@@ -311,7 +311,7 @@ export default function Home() {
               <thead>
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-4 px-2 text-sm font-semibold text-gray-700">
-                    площадь, м<sup>2</sup>
+                    площадь,&nbsp;м<sup>2</sup>
                   </th>
                   <th className="text-right py-4 px-2 text-sm font-semibold text-gray-700">
                     стоимость, ₽ за м<sup>2</sup>
@@ -324,7 +324,7 @@ export default function Home() {
                     <p className="text-lg font-medium text-gray-900">До 40</p>
                   </td>
                   <td className="py-4 px-2 text-right">
-                    <p className="text-3xl font-bold text-sky-900">
+                    <p className="text-2xl font-bold text-sky-900">
                       договорная
                     </p>
                   </td>
@@ -336,7 +336,7 @@ export default function Home() {
                     </p>
                   </td>
                   <td className="py-4 px-2 text-right">
-                    <p className="text-3xl font-bold text-sky-900">от 1 650</p>
+                    <p className="text-2xl font-bold text-sky-900">от 1 650</p>
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -346,7 +346,7 @@ export default function Home() {
                     </p>
                   </td>
                   <td className="py-4 px-2 text-right">
-                    <p className="text-3xl font-bold text-sky-900">от 1 550</p>
+                    <p className="text-2xl font-bold text-sky-900">от 1 550</p>
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -356,7 +356,7 @@ export default function Home() {
                     </p>
                   </td>
                   <td className="py-4 px-2 text-right">
-                    <p className="text-3xl font-bold text-sky-900">от 1 450</p>
+                    <p className="text-2xl font-bold text-sky-900">от 1 450</p>
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -366,7 +366,7 @@ export default function Home() {
                     </p>
                   </td>
                   <td className="py-4 px-2 text-right">
-                    <p className="text-3xl font-bold text-sky-900">
+                    <p className="text-2xl font-bold text-sky-900">
                       договорная
                     </p>
                   </td>
@@ -446,7 +446,7 @@ export default function Home() {
           </div>
 
           {/* Сноски */}
-          <div className="text-center space-y-1 max-w-3xl mx-auto">
+          <div className="text-center space-y-2 max-w-3xl mx-auto">
             <p className="text-sm text-gray-600">
               Стоимость указана за стяжку пола при толщине слоя 8 см для квартир
               и 5 см для других объектов.
