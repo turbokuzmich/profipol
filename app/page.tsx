@@ -7,6 +7,7 @@ import {
   BuildingOfficeIcon,
   ClockIcon,
 } from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import FAQSection from "./components/faq";
 import Logo from "./components/logo";
 import Header from "./components/header";
@@ -377,6 +378,90 @@ export default function Home() {
       </section>
 
       {/* Блок «Все включено» */}
+      <section className="px-4 md:px-5 2xl:px-0 bg-white">
+        <div className="max-w-7xl mx-auto pt-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Все включено
+            </h2>
+          </div>
+
+          {/* Карточки */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto mb-7">
+            {/* Левая карточка: Материалы */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Материалы
+              </h3>
+              <ul className="space-y-3">
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Песок мытый крупнофракционный</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Евроцемент М500</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Фиброволокно полипропиленовое</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Демпферная лента</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Пленка полиэтиленовая</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Правая карточка: Работы */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Работы</h3>
+              <ul className="space-y-3">
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Доставка, разгрузка и подъем на этаж</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Укладка пленки на поверхность</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Подготовление и подача раствора</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Укладка раствора по маякам</span>
+                </li>
+                <li className="text-lg text-gray-700 flex items-start">
+                  <ChevronRightIcon className="w-5 h-5 mr-3 shrink-0 mt-1" />
+                  <span>Уборка и вынос мусора</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Сноски */}
+          <div className="text-center space-y-1 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-600">
+              Стоимость указана за стяжку пола при толщине слоя 8 см для квартир
+              и 5 см для других объектов.
+            </p>
+            <p className="text-sm text-gray-600">
+              При толщине более указанных значений — стоимость увеличивается на
+              60&nbsp;₽ за&nbsp;1&nbsp;см.
+            </p>
+            <p className="text-sm text-gray-600">
+              При расположении квартиры / объекта выше 12 этажа — стоимость +
+              1000&nbsp;₽ за&nbsp;этаж.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Блок FAQ */}
       <FAQSection />
