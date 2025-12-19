@@ -489,7 +489,7 @@ export default function Home() {
                   <h2 className="block w-24 md:w-33">
                     <Logo />
                   </h2>
-                  <p className="text-xl leading-relaxed">
+                  <p className="text-lg leading-relaxed">
                     Мы — команда профессионалов с многолетним опытом в области
                     стяжки пола
                   </p>
@@ -535,8 +535,10 @@ export default function Home() {
                 {/* Юридическая информация */}
                 <div className="pt-4 border-t border-gray-300">
                   <p className="text-xs text-gray-800 space-y-1">
-                    <span className="block">ИНН: 123456789012</span>
-                    <span className="block">ОГРН: 1234567890123</span>
+                    <span className="block">ИНН: 500305045828</span>
+                    <span className="block">ОГРНИП: 325774600737582</span>
+                    <span className="block">Р/с: 40802810220000800031</span>
+                    <span className="block">Банк: ООО «Банк Точка»</span>
                     <span className="block mt-2">
                       © 2025. Все права защищены.
                     </span>
